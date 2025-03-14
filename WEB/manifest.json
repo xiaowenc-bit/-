@@ -1,0 +1,61 @@
+
+
+
+  {
+    "manifest_version": 3,
+   
+    "name": "Bilibili Video Title Collector",
+   
+    "version": "1.0",
+   
+    "description": "Collects video title from Bilibili.",
+   
+    "icons": {
+   
+        "48": "images/setting.png"
+   
+    },
+   
+    "content_scripts": [
+   
+      {
+        "matches": ["*://www.bilibili.com/video/*"],
+        "js": ["content-script-bilibili.js"]
+      },
+
+      {
+        "matches": ["*://www.iqiyi.com/*"],
+        "js": ["content-script-iqiyi.js"]
+      },
+
+      {
+        "matches": ["*://v.qq.com/x/cover/*"],
+        "js": ["content-script-tencent.js"]
+      },
+
+      {
+        "matches": ["*://live.kuaishou.com/u/*"],
+        "js": ["content-script-kuaishoulive.js"]
+      },
+
+      {
+        "matches": ["*://www.huya.com/*"],
+        "js": ["content-script-huya.js"]
+      },
+
+      {
+        "matches": ["*://www.douyu.com/*"],
+        "js": ["content-script-douyu.js"]
+      },
+
+      {
+        "matches": ["*://live.bilibili.com/*"],
+        "js": ["content-script-bilibililive.js"]
+      }
+   
+    ],
+   
+    "permissions": ["activeTab"]
+   
+  }
+  
